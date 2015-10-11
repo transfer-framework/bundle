@@ -1,0 +1,21 @@
+services:
+    transfer.command.manifest.list:
+        class: Transfer\Console\Command\Manifest\ListCommand
+        calls:
+            - [setName, ["transfer:manifest:list"]]
+        tags:
+            -  { name: console.command }
+
+    transfer.command.manifest.run:
+        class: Transfer\Console\Command\Manifest\RunCommand
+        calls:
+            - [setName, ["transfer:manifest:run"]]
+        tags:
+            -  { name: console.command }
+
+    transfer.command.manifest.describe:
+        class: Transfer\Console\Command\Manifest\DescribeCommand
+        calls:
+            - [setName, ["transfer:manifest:describe"]]
+        tags:
+            -  { name: console.command }

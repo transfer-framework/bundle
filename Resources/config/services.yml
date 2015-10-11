@@ -1,0 +1,23 @@
+imports:
+    - { resource: event_system.yml }
+    - { resource: commands.yml }
+
+services:
+    # Manifest chain
+    transfer.manifest.chain:
+        class: Transfer\Manifest\ManifestChain
+
+    # Manifest runner
+    transfer.manifest.runner:
+        class: Transfer\Manifest\ManifestRunner
+        calls:
+            - [setEventDispatcher, [@transfer.event_dispatcher]]
+
+    # Listeners
+    transfer.event_listener.command_listener:
+        class: Transfer\Bundle\EventListener\CommandListener
+        arguments:
+            - @transfer.manifest.chain
+            - @transfer.event_dispatcher
+        tags:
+            - { name: kernel.event_listener, event: console.command, method: command }
