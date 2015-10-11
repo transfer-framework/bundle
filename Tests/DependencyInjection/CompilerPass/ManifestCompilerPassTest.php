@@ -41,8 +41,7 @@ class ManifestCompilerPassTest extends \PHPUnit_Framework_TestCase
 
         $container
             ->register('my_manifest', 'Transfer\Bundle\Tests\DependencyInjection\CompilerPass\MockManifest')
-            ->addTag('transfer.manifest')
-        ;
+            ->addTag('transfer.manifest');
 
         $pass = new ManifestCompilerPass();
         $pass->process($container);

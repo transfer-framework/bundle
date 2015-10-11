@@ -9,11 +9,11 @@
 
 namespace Transfer\Bundle;
 
-use Transfer\Bundle\DependencyInjection\CompilerPass\ManifestCompilerPass;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\EventDispatcher\DependencyInjection\RegisterListenersPass;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Transfer\Bundle\DependencyInjection\CompilerPass\ManifestCompilerPass;
 
 class TransferBundle extends Bundle
 {
