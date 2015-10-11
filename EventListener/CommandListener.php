@@ -9,11 +9,11 @@
 
 namespace Transfer\Bundle\EventListener;
 
+use Symfony\Component\Console\Event\ConsoleCommandEvent;
+use Symfony\Component\EventDispatcher\EventDispatcher;
 use Transfer\Console\Command\Manifest\ManifestCommand;
 use Transfer\Console\Command\Manifest\RunCommand;
 use Transfer\Manifest\ManifestChain;
-use Symfony\Component\Console\Event\ConsoleCommandEvent;
-use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class CommandListener
 {
