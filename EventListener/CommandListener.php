@@ -40,7 +40,7 @@ class CommandListener
     /**
      * Returns an array of supported commands.
      *
-     * @return array Support commands
+     * @return string[] Support commands
      */
     public function getSupportedCommands()
     {
