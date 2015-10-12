@@ -21,6 +21,6 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
 
         $tree = $builder->buildTree();
 
-        $this->assertEquals('transfer', $tree->getName('root'));
+        $this->assertEquals('transfer', $tree->getName());
     }
 }
