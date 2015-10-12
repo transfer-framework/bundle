@@ -11,24 +11,6 @@ namespace Transfer\Bundle\Tests\DependencyInjection\CompilerPass;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Transfer\Bundle\DependencyInjection\CompilerPass\ManifestCompilerPass;
-use Transfer\Manifest\AbstractManifest;
-use Transfer\Procedure\ProcedureBuilder;
-use Transfer\Processor\ProcessorInterface;
-
-class MockManifest extends AbstractManifest
-{
-    public function getName()
-    {
-    }
-
-    public function configureProcedureBuilder(ProcedureBuilder $builder)
-    {
-    }
-
-    public function configureProcessor(ProcessorInterface $processor)
-    {
-    }
-}
 
 class ManifestCompilerPassTest extends \PHPUnit_Framework_TestCase
 {
@@ -40,7 +22,7 @@ class ManifestCompilerPassTest extends \PHPUnit_Framework_TestCase
             ->register('transfer.manifest.chain', 'Transfer\Manifest\ManifestChain');
 
         $container
-            ->register('my_manifest', 'Transfer\Bundle\Tests\DependencyInjection\CompilerPass\MockManifest')
+            ->register('my_manifest', 'Transfer\Bundle\Tests\DependencyInjection\CompilerPass\ManifestMock')
             ->addTag('transfer.manifest');
 
         $pass = new ManifestCompilerPass();
