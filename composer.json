@@ -3,7 +3,8 @@
     "type": "symfony-bundle",
     "description": "Transfer Symfony 2 Bundle",
     "keywords": ["transfer", "bundle"],
-    "author": [
+    "license": "MIT",
+    "authors": [
         {
             "name": "Valentin Jonovs",
             "email": "valentin@jonovs.com"
