@@ -9,6 +9,6 @@ Installation
 
 Install the latest version with:
 
-`$ composer require transfer/bundle`
+    $ composer require transfer/bundle
 
 This requires [Composer](https://getcomposer.org/download/) to be installed globally in your system.
