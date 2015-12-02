@@ -11,13 +11,13 @@ services:
     transfer.manifest.runner:
         class: Transfer\Manifest\ManifestRunner
         calls:
-            - [setEventDispatcher, [@transfer.event_dispatcher]]
+            - [setEventDispatcher, ["@transfer.event_dispatcher"]]
 
     # Listeners
     transfer.event_listener.command_listener:
         class: Transfer\Bundle\EventListener\CommandListener
         arguments:
-            - @transfer.manifest.chain
-            - @transfer.event_dispatcher
+            - "@transfer.manifest.chain"
+            - "@transfer.event_dispatcher"
         tags:
             - { name: kernel.event_listener, event: console.command, method: command }
