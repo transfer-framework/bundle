@@ -32,6 +32,30 @@ Then, enable the bundle by adding the following line in the app/AppKernel.php fi
       }
     }
 
+Registering manifests
+---------------------
+
+To register a manifest, create a new service tagged with the manifest tag:
+
+    manifest.test:
+        class: Acme\Manifest\TestManifest
+        tags:
+            - { name: transfer.manifest }
+            
+Listing registered manifests
+----------------------------
+
+To list the registered manifests, run the following command:
+
+    php app/console transfer:manifest:list
+
+Running manifests
+-----------------
+
+To run a manifest, run the `transfer:manifest:run` command and pass the manifest name as the first argument:
+
+    php app/console transfer:manifest:run test_manifest
+
 License
 -------
 
