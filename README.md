@@ -18,19 +18,21 @@ Enable the Bundle
 
 Then, enable the bundle by adding the following line in the app/AppKernel.php file of your project:
 
-    // app/AppKernel.php
-    class AppKernel extends Kernel
-    {
-      public function registerBundles()
-      {
-          $bundles = array(
-              // ...
-              new Transfer\Bundle\TransferBundle(),
-          );
-
+```php    
+// app/AppKernel.php
+class AppKernel extends Kernel
+{
+  public function registerBundles()
+  {
+      $bundles = array(
           // ...
-      }
-    }
+          new Transfer\Bundle\TransferBundle(),
+      );
+
+      // ...
+  }
+}
+```
 
 Registering manifests
 ---------------------
